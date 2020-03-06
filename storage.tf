@@ -1,5 +1,7 @@
 resource "aws_s3_bucket" "alb_log" {
   bucket = "example-alb-log-bucket"
+  # force_destroy = false
+  force_destroy = true
 
   lifecycle_rule {
     enabled = true
